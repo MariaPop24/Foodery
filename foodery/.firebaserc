@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "foodery-c383c": {
+      "hosting": {
+        "foodery": [
+          "foodery-c383c"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "foodery-c383c"
+  }
+}
