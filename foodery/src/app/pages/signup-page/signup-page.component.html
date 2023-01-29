@@ -1,1 +1,39 @@
-<p>signup-page works!</p>
+<div class="container">
+  <div class="content-container">
+    <img class="logo-image" src="../../../assets/images/logo.png" />
+    <form id="signup-form" [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <input
+        required
+        placeholder="Name"
+        formControlName="name"
+        class="name-input"
+      />
+      <input
+        required
+        placeholder="Email"
+        type="email"
+        formControlName="email"
+      />
+      <input
+        required
+        placeholder="Password"
+        type="password"
+        formControlName="password"
+        minlength="6"
+      />
+      <p *ngIf="displayValidationMessage" class="validation-message red-text">
+        All fields are mandatory!
+      </p>
+      <div *ngIf="isLoading" class="spinner">
+        <app-loading-spinner></app-loading-spinner>
+      </div>
+      <button type="submit" *ngIf="!isLoading" class="sgn-btn">
+        Sign me up
+      </button>
+    </form>
+    <p>
+      Already a member?
+      <span class="link-text" (click)="switchToLogin()">Log in</span>
+    </p>
+  </div>
+</div>
