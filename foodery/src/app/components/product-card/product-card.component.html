@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="image-favorite-container">
+    <img
+      class="product-image"
+      src="https://www.mesopotamia.ro/wp-content/uploads/2021/06/size-produse-box-min.jpg.webp"
+    />
+    <div class="favorite-icon" (click)="addToFavorites()">
+      <img
+        *ngIf="isFavorite"
+        class="heart-icon"
+        src="../../../assets/icons/heart-icon.png"
+      />
+      <img
+        *ngIf="!isFavorite"
+        class="filled-heart-icon"
+        src="../../../assets/icons/filled-heart-icon.png"
+      />
+    </div>
+  </div>
+  <div class="product-name">Box kebab</div>
+  <div class="product-ingredients">
+    Carne kebab rotisată (curcan și vițel amestec), salată verde, roșii, ceapă
+    roșie, sos alb
+  </div>
+  <button>
+    <img class="icon" src="../../../assets/icons/cart-icon.png" />
+    30.99RON
+  </button>
+</div>
