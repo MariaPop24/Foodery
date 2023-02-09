@@ -1,0 +1,42 @@
+<div class="container">
+  <app-navigation-bar></app-navigation-bar>
+  <div class="content-container">
+    <div class="avatar-container">
+      <img src="{{ avatarURL }}" class="avatar" />
+      <p class="name">{{ profileName }}</p>
+      <!-- <button (click)="logout()">log out</button> -->
+    </div>
+    <div class="info-container">
+      <div class="details-container">
+        <div class="field">
+          <div class="title">
+            <div class="image">
+              <img class="icon" src="../../../assets/icons/name-icon.png" />
+            </div>
+            <span class="title-text">Full name</span>
+          </div>
+          <p class="task-data">{{ profileName }}</p>
+        </div>
+        <div class="field">
+          <div class="title">
+            <div class="image">
+              <img class="icon" src="../../../assets/icons/email-icon.png" />
+            </div>
+            <span class="title-text">Email</span>
+          </div>
+          <p class="task-data">{{ profileEmail }}</p>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <button>
+          <img src="../../../assets/icons/edit-icon.png" class="icon" />
+          Edit
+        </button>
+        <button (click)="logout()">
+          <img src="../../../assets/icons/exit-icon.png" class="icon" />
+          Log out
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
