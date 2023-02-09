@@ -12,8 +12,11 @@ import { Router } from '@angular/router';
 export class NavigationBarComponent implements OnInit {
   public avatarURL: string | undefined;
   public profileName: string | undefined;
+  public isLoggedIn: boolean;
 
-  constructor(public afAuth: AngularFireAuth, private router: Router, private db: AngularFireDatabase) { }
+  constructor(private afAuth: AngularFireAuth, private router: Router, private db: AngularFireDatabase) {
+    this.isLoggedIn = true;
+  }
 
   ngOnInit(): void {
     this.getStarted();
@@ -33,9 +36,9 @@ export class NavigationBarComponent implements OnInit {
       let names = this.profileName.split(" ");
 
       if (names.length > 1) {
-        this.avatarURL = "https://ui-avatars.com/api/?name=" + names[0] + "+" + names[names.length - 1] + "&background=6112E1&color=fff";
+        this.avatarURL = "https://ui-avatars.com/api/?name=" + names[0] + "+" + names[names.length - 1] + "&background=FF8126&color=fff";
       } else {
-        this.avatarURL = "https://ui-avatars.com/api/?name=" + names[0] + "&background=6112E1&color=fff&uppercase=false";
+        this.avatarURL = "https://ui-avatars.com/api/?name=" + names[0] + "&background=FF8126&color=fff&uppercase=true";
       }
     }
   }
@@ -79,5 +82,7 @@ export class NavigationBarComponent implements OnInit {
   goToProfilePage() {
     this.router.navigate(['./profile']);
   }
+
+
 
 }

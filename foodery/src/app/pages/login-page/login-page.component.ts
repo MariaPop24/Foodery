@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AuthService } from 'src/app/services/auth.service';
@@ -13,10 +14,12 @@ export class LoginPageComponent implements OnInit {
   firebaseErrorMessage: string;
   public isLoading = false;
   public displayValidationMessage = false;
+  activeUser: any;
 
   constructor(
     private authService: AuthService,
     private router: Router,
+    private afAuth: AngularFireAuth
   ) {
     this.loginForm = new FormGroup({
       email: new FormControl('', [Validators.required, Validators.email]),
@@ -24,6 +27,9 @@ export class LoginPageComponent implements OnInit {
     });
 
     this.firebaseErrorMessage = '';
+    try {
+      this.checkAutoLogin();
+    } catch { }
   }
 
   ngOnInit(): void {
@@ -45,11 +51,20 @@ export class LoginPageComponent implements OnInit {
           let username = this.loginForm.value.email.replace(/[^a-z0-9]/gi, '');
           localStorage.setItem('user', username);
           this.isLoading = false;
-          this.router.navigate(['../signup']);
+          this.router.navigate(['../catalog']);
         } else {
           this.isLoading = false;
         }
       });
+  }
+
+  async checkAutoLogin() {
+    try {
+      this.activeUser = (await this.afAuth.currentUser)?.email;
+    } catch { }
+    if (this.activeUser) {
+      this.router.navigate(['./catalog']);
+    }
   }
 
   switchToSignUp() {

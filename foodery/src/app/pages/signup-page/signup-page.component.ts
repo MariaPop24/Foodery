@@ -52,7 +52,7 @@ export class SignupPageComponent implements OnInit {
           await this.db.object('users/' + username + '/info').set(formData);
           localStorage.setItem("user", username);
 
-          this.router.navigate(['../login']);
+          this.router.navigate(['../catalog']);
         }
         else {
           this.isLoading = false;

@@ -9,13 +9,29 @@ import { SignupPageComponent } from './pages/signup-page/signup-page.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AngularFireModule } from '@angular/fire/compat';
 import { LoadingSpinnerComponent } from './components/loading-spinner/loading-spinner.component';
+import { NavigationBarComponent } from './components/navigation-bar/navigation-bar.component';
+import { HomePageComponent } from 'src/app/pages/home-page/home-page.component';
+import { CatalogPageComponent } from './pages/catalog-page/catalog-page.component';
+import { CartPageComponent } from './pages/cart-page/cart-page.component';
+import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.component';
+import { ProductCardComponent } from './components/product-card/product-card.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { EditProfilePageComponent } from 'src/app/pages/edit-profile-page/edit-profile-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginPageComponent,
     SignupPageComponent,
-    LoadingSpinnerComponent
+    LoadingSpinnerComponent,
+    NavigationBarComponent,
+    HomePageComponent,
+    CatalogPageComponent,
+    CartPageComponent,
+    WishlistPageComponent,
+    ProductCardComponent,
+    ProfilePageComponent,
+    EditProfilePageComponent
   ],
   imports: [
     BrowserModule,

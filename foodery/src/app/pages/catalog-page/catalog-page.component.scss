@@ -1,0 +1,28 @@
+@import "../../../styles/global-colors";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+* {
+  font-family: "Space Mono", monospace;
+}
+
+.container {
+  background: url("..//../../assets/images/background-image-2.webp") no-repeat
+    center center fixed;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
+  min-width: 100%;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
