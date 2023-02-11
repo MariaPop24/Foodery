@@ -18,9 +18,8 @@ import { ProductCardComponent } from './components/product-card/product-card.com
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { EditProfilePageComponent } from 'src/app/pages/edit-profile-page/edit-profile-page.component';
 import { CartProductComponent } from './components/cart-product/cart-product.component';
-import { WelcomeMessageComponent } from './components/welcome-message/welcome-message.component';
-import { A11yModule } from '@angular/cdk/a11y';
-
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SnackBarMessageComponent } from './components/snack-bar-message/snack-bar-message.component';
 
 @NgModule({
   declarations: [
@@ -37,7 +36,7 @@ import { A11yModule } from '@angular/cdk/a11y';
     ProfilePageComponent,
     EditProfilePageComponent,
     CartProductComponent,
-    WelcomeMessageComponent
+    SnackBarMessageComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +45,7 @@ import { A11yModule } from '@angular/cdk/a11y';
     ReactiveFormsModule,
     AngularFireModule.initializeApp(environment.firebase),
     MatSnackBarModule,
-    A11yModule
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
