@@ -11,7 +11,6 @@ export class SnackBarMessageComponent {
   @Input() profileName!: string;
 
   constructor(private _snackBar: MatSnackBar) {
-    this.profileName = "asdfg"
   }
 
   ngOnInit(): void {
