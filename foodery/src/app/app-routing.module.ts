@@ -8,6 +8,7 @@ import { LoginPageComponent } from 'src/app/pages/login-page/login-page.componen
 import { ProfilePageComponent } from 'src/app/pages/profile-page/profile-page.component';
 import { SignupPageComponent } from 'src/app/pages/signup-page/signup-page.component';
 import { WishlistPageComponent } from 'src/app/pages/wishlist-page/wishlist-page.component';
+import { AuthGuard } from 'src/app/services/auth.guard';
 
 const routes: Routes = [
   { path: '', redirectTo: 'home', pathMatch: 'full' },
@@ -17,8 +18,8 @@ const routes: Routes = [
   { path: 'catalog', component: CatalogPageComponent },
   { path: 'cart', component: CartPageComponent },
   { path: 'wishlist', component: WishlistPageComponent },
-  { path: 'profile', component: ProfilePageComponent },
-  { path: 'profile/edit', component: EditProfilePageComponent },
+  { path: 'profile', component: ProfilePageComponent, canActivate: [AuthGuard] },
+  { path: 'profile/edit', component: EditProfilePageComponent, canActivate: [AuthGuard] },
 ];
 
 @NgModule({
