@@ -1,1 +1,22 @@
-<p>cart-product works!</p>
+<div class="container">
+  <img
+    class="product-image"
+    src="https://www.mesopotamia.ro/wp-content/uploads/2021/06/size-produse-box-min.jpg.webp"
+  />
+  <div class="text-container">
+    <div class="product-name">Box kebab</div>
+    <div class="ingredients">
+      Carne kebab rotisată (curcan și vițel amestec), salată verde, roșii, ceapă
+      roșie, sos alb
+    </div>
+  </div>
+  <div class="quantity-container">
+    <div class="quantity-buttons">
+      <button class="quantity" (click)="decreaseQuantity()">-</button>
+      <input value="1" type="number" min="0" max="10" />
+      <button class="quantity" (click)="increaseQuantity()">+</button>
+    </div>
+    <p class="remove-button">Remove</p>
+  </div>
+  <div class="price-text">30.99RON</div>
+</div>

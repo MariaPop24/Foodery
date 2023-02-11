@@ -1,0 +1,69 @@
+@import "../../../styles/global-colors";
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Space+Mono&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+
+.container {
+  background-color: $color-white;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.product-image {
+  height: 200px;
+  width: 250px;
+  border-radius: 20px;
+}
+
+.text-container {
+  width: 35%;
+  justify-self: flex-start;
+}
+
+.product-name {
+  font-size: 50px;
+}
+
+.ingredients {
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+}
+
+.quantity {
+  border: 2px solid $color-grey-0;
+  padding: 1rem;
+  background-color: $color-white;
+  color: $color-grey-3;
+  cursor: pointer;
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input {
+  border: 2px solid $color-grey-0;
+  width: 1rem;
+  padding: 1rem;
+  text-align: center;
+  color: $color-grey-3;
+}
+
+.remove-button {
+  text-decoration: underline;
+  cursor: pointer;
+  text-align: center;
+}
+
+.price-text {
+  margin-right: 2rem;
+}
