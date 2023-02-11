@@ -17,6 +17,7 @@ import { WishlistPageComponent } from './pages/wishlist-page/wishlist-page.compo
 import { ProductCardComponent } from './components/product-card/product-card.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { EditProfilePageComponent } from 'src/app/pages/edit-profile-page/edit-profile-page.component';
+import { CartProductComponent } from './components/cart-product/cart-product.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { EditProfilePageComponent } from 'src/app/pages/edit-profile-page/edit-p
     WishlistPageComponent,
     ProductCardComponent,
     ProfilePageComponent,
-    EditProfilePageComponent
+    EditProfilePageComponent,
+    CartProductComponent
   ],
   imports: [
     BrowserModule,
