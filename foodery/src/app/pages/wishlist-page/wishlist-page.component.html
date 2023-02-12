@@ -1,8 +1,13 @@
 <div class="container">
   <app-navigation-bar class="navbar"></app-navigation-bar>
   <div class="content-container">
-    <app-wishlist-product></app-wishlist-product>
-    <app-wishlist-product></app-wishlist-product>
-    <app-wishlist-product></app-wishlist-product>
+    <div *ngFor="let product of products">
+      <app-wishlist-product
+        [productName]="product.name"
+        [productIngredients]="product.ingredients"
+        [productImage]="product.image"
+        [productPrice]="product.price"
+      ></app-wishlist-product>
+    </div>
   </div>
 </div>

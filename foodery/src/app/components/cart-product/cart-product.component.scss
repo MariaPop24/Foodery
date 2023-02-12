@@ -5,11 +5,12 @@
 .container {
   background-color: $color-white;
   border-radius: 30px;
-  margin-bottom: 2rem;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   padding: 2rem;
+  width: 80%;
+  margin: auto auto 2rem auto;
 }
 
 .product-image {

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-wishlist-product',
@@ -9,6 +9,10 @@ export class WishlistProductComponent {
   public product!: Product;
   public isRemoved!: boolean;
   public isAddedToCart!: boolean;
+  @Input() productName!: string;
+  @Input() productIngredients!: string;
+  @Input() productImage!: string;
+  @Input() productPrice!: number;
 
   constructor() {
   }
