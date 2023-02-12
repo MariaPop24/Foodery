@@ -5,14 +5,13 @@
     [profileName]="profileName"
   ></app-snack-bar-message>
   <div class="content-container">
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
-    <app-product-card></app-product-card>
+    <div *ngFor="let product of products">
+      <app-product-card
+        [productName]="product.name"
+        [productIngredients]="product.ingredients"
+        [productImage]="product.image"
+        [productPrice]="product.price"
+      ></app-product-card>
+    </div>
   </div>
 </div>
