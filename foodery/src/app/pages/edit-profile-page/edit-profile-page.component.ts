@@ -4,6 +4,7 @@ import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-edit-profile-page',
@@ -19,7 +20,7 @@ export class EditProfilePageComponent implements OnInit {
   public vld: Boolean;
 
 
-  constructor(public afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router) {
+  constructor(public afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router, private snackBar: MatSnackBar) {
     this.profileDetails = { fullName: "" };
     this.profileName = ""
     this.profileEmail = ""
@@ -85,6 +86,9 @@ export class EditProfilePageComponent implements OnInit {
       };
       let username = localStorage.getItem('user');
       this.db.object('users/' + username + '/info').set(editformData);
+      this.snackBar.open('Changes saved successfully', 'Dismiss', {
+        duration: 3000 // Time in milliseconds to show the snackbar
+      });
       this.router.navigate(['./profile']);
     } else {
       this.vld = false;
