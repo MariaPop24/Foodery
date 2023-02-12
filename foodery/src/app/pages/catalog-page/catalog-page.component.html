@@ -1,7 +1,10 @@
 <div class="container">
   <app-navigation-bar></app-navigation-bar>
   <div class="content-container">
-    <app-snack-bar-message [profileName]="profileName"></app-snack-bar-message>
+    <app-snack-bar-message
+      [profileName]="profileName"
+      [isRemoveMessage]="false"
+    ></app-snack-bar-message>
     <app-product-card></app-product-card>
   </div>
 </div>

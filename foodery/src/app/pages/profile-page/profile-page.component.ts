@@ -33,17 +33,14 @@ export class ProfilePageComponent implements OnInit {
     details = [];
     await this.getDetails().then((value) => {
       details = value as string[];
-      console.log("details", details)
     });
 
     try {
       this.profileEmail = (await this.afAuth.currentUser)?.email;
-      console.log("email", this.profileEmail)
     } catch { }
 
     if (details.length >= 1) {
       this.profileName = details[0];
-      console.log("121211", this.profileName)
       let names = this.profileName.split(" ");
       if (names.length > 1) {
         this.avatarURL = "https://ui-avatars.com/api/?name=" + names[0] + "+" + names[names.length - 1] + "&background=FF8126&color=fff";

@@ -9,6 +9,8 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 export class SnackBarMessageComponent {
 
   @Input() profileName!: string;
+  @Input() isRemoveMessage!: boolean;
+
 
   constructor(private _snackBar: MatSnackBar) {
   }
@@ -19,11 +21,21 @@ export class SnackBarMessageComponent {
 
   generateAlert() {
     setTimeout(() => {
-      this._snackBar.open('Welcome, ' + this.profileName, 'Close', {
-        duration: 1000,
-        verticalPosition: 'top',
-      });
+      if (this.profileName) {
+        this._snackBar.open('Welcome, ' + this.profileName, 'Close', {
+          duration: 1000,
+          verticalPosition: 'top',
+        });
+      }
     }, 1000)
+    if (this.isRemoveMessage) {
+      setTimeout(() => {
+        this._snackBar.open('Item removed from cart!', 'Close', {
+          duration: 1000,
+          verticalPosition: 'top',
+        });
+      }, 0)
+    }
 
   }
 }

@@ -21,9 +21,19 @@
   align-content: center;
 }
 
+.container-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
 .content-container {
   display: flex;
   flex-direction: column;
   margin: auto;
   justify-self: center;
+  background-color: $color-white;
+  border-radius: 30px;
+  max-height: 36rem;
+  overflow: auto;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer and Edge */
 }

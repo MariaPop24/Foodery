@@ -1,4 +1,9 @@
 <div class="container">
+  <div *ngIf="isRemoved">
+    <app-snack-bar-message
+      [isRemoveMessage]="isRemoved"
+    ></app-snack-bar-message>
+  </div>
   <img
     class="product-image"
     src="https://www.mesopotamia.ro/wp-content/uploads/2021/06/size-produse-box-min.jpg.webp"
@@ -16,7 +21,7 @@
       <input value="1" type="number" min="0" max="10" />
       <button class="quantity" (click)="increaseQuantity()">+</button>
     </div>
-    <p class="remove-button">Remove</p>
+    <p class="remove-button" (click)="removeItemFromCart()">Remove</p>
   </div>
   <div class="price-text">30.99RON</div>
 </div>

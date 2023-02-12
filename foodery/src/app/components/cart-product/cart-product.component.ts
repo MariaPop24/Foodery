@@ -7,6 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CartProductComponent implements OnInit {
   public product!: Product;
+  public isRemoved!: boolean;
 
   constructor() {
   }
@@ -22,6 +23,10 @@ export class CartProductComponent implements OnInit {
   decreaseQuantity() {
     if (this.product.quantity)
       this.product.quantity -= 1;
+  }
+
+  removeItemFromCart() {
+    this.isRemoved = true;
   }
 
 }

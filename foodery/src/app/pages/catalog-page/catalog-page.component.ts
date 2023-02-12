@@ -25,7 +25,6 @@ export class CatalogPageComponent implements OnInit {
     });
 
     this.profileName = details[0];
-    console.log("121212", this.profileName)
   }
 
   getDetails() {
