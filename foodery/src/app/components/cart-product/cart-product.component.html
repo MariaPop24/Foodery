@@ -2,15 +2,11 @@
   <app-snack-bar-message [isRemoveMessage]="isRemoved"></app-snack-bar-message>
 </div>
 <div class="container" *ngIf="!isRemoved">
-  <img
-    class="product-image"
-    src="https://www.mesopotamia.ro/wp-content/uploads/2021/06/size-produse-box-min.jpg.webp"
-  />
+  <img class="product-image" src="{{ productImage }}" />
   <div class="text-container">
-    <div class="product-name">Box kebab</div>
+    <div class="product-name">{{ productName }}</div>
     <div class="ingredients">
-      Carne kebab rotisată (curcan și vițel amestec), salată verde, roșii, ceapă
-      roșie, sos alb
+      {{ productIngredients | slice : 0 : 100 }}
     </div>
   </div>
   <div class="quantity-container">
@@ -21,5 +17,7 @@
     </div>
     <p class="remove-button" (click)="removeItemFromCart()">Remove</p>
   </div>
-  <div class="price-text">{{ quantity * 30.99 | number : "1.2-2" }}RON</div>
+  <div class="price-text">
+    {{ quantity * productPrice | number : "1.2-2" }}RON
+  </div>
 </div>

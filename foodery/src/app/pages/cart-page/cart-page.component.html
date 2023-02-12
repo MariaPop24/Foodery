@@ -1,9 +1,14 @@
 <div class="container">
   <app-navigation-bar class="navbar"></app-navigation-bar>
   <div class="content-container">
-    <app-cart-product></app-cart-product>
-    <app-cart-product></app-cart-product>
-    <app-cart-product></app-cart-product>
+    <div *ngFor="let product of products">
+      <app-cart-product
+        [productName]="product.name"
+        [productIngredients]="product.ingredients"
+        [productImage]="product.image"
+        [productPrice]="product.price"
+      ></app-cart-product>
+    </div>
     <div class="total">
       <span class="total-text">Estimated total: 30.99RON</span>
       <button class="checkout-button">Go to checkout</button>
