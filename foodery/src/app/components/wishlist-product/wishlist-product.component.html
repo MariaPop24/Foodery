@@ -4,6 +4,11 @@
       [isRemoveMessage]="isRemoved"
     ></app-snack-bar-message>
   </div>
+  <div *ngIf="isAddedToCart" class="snackbar-message">
+    <app-snack-bar-message
+      [isAddedToCart]="isAddedToCart"
+    ></app-snack-bar-message>
+  </div>
   <img
     class="product-image"
     src="https://www.mesopotamia.ro/wp-content/uploads/2021/06/size-produse-box-min.jpg.webp"
@@ -16,12 +21,8 @@
     </div>
   </div>
   <div class="quantity-container">
-    <div class="quantity-buttons">
-      <button class="quantity" (click)="decreaseQuantity()">-</button>
-      <input value="{{ quantity }}" type="number" min="0" max="10" />
-      <button class="quantity" (click)="increaseQuantity()">+</button>
-    </div>
+    <button class="cart-button" (click)="addToCart()">Add to cart</button>
     <p class="remove-button" (click)="removeItemFromCart()">Remove</p>
   </div>
-  <div class="price-text">{{ quantity * 30.99 | number : "1.2-2" }}RON</div>
+  <div class="price-text">30.99RON</div>
 </div>

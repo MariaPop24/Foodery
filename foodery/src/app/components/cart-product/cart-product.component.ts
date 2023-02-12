@@ -8,21 +8,27 @@ import { Component, OnInit } from '@angular/core';
 export class CartProductComponent implements OnInit {
   public product!: Product;
   public isRemoved!: boolean;
+  public quantity!: number;
 
   constructor() {
+    this.quantity = 1;
   }
 
   ngOnInit(): void {
   }
 
   increaseQuantity() {
-    if (this.product.quantity)
-      this.product.quantity += 1;
+    this.quantity += 1;
+    console.log(this.quantity)
+    // if (this.product.quantity)
+    //   this.product.quantity += 1;
   }
 
   decreaseQuantity() {
-    if (this.product.quantity)
-      this.product.quantity -= 1;
+    this.quantity -= 1;
+    console.log(this.quantity)
+    // if (this.product.quantity)
+    //   this.product.quantity -= 1;
   }
 
   removeItemFromCart() {

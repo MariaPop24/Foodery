@@ -10,7 +10,6 @@
   background: url("..//../../assets/images/background-image-2.webp") no-repeat
     center center fixed;
   background-size: cover;
-  position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -24,5 +23,11 @@
 .content-container {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 3rem auto;
+  justify-content: center;
+}
+
+.navbar {
+  position: sticky;
+  top: 0;
 }

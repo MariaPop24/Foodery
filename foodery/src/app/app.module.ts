@@ -20,6 +20,7 @@ import { EditProfilePageComponent } from 'src/app/pages/edit-profile-page/edit-p
 import { CartProductComponent } from './components/cart-product/cart-product.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SnackBarMessageComponent } from './components/snack-bar-message/snack-bar-message.component';
+import { WishlistProductComponent } from './components/wishlist-product/wishlist-product.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { SnackBarMessageComponent } from './components/snack-bar-message/snack-b
     ProfilePageComponent,
     EditProfilePageComponent,
     CartProductComponent,
-    SnackBarMessageComponent
+    SnackBarMessageComponent,
+    WishlistProductComponent
   ],
   imports: [
     BrowserModule,

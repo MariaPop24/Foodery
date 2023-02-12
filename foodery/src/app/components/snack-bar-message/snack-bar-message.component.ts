@@ -33,7 +33,7 @@ export class SnackBarMessageComponent {
 
     if (this.isRemoveMessage) {
       setTimeout(() => {
-        this._snackBar.open('Item removed from cart!', 'Close', {
+        this._snackBar.open('Item removed!', 'Close', {
           duration: 1000,
           verticalPosition: 'top',
         });

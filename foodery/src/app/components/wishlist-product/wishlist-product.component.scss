@@ -2,6 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+* {
+  font-family: "Space Mono", monospace;
+}
+
 .container {
   background-color: $color-white;
   border-radius: 30px;
@@ -31,12 +35,18 @@
   font-family: "Roboto", sans-serif;
 }
 
-.quantity {
-  border: 2px solid $color-grey-0;
-  padding: 1rem;
-  background-color: $color-white;
-  color: $color-grey-3;
-  cursor: pointer;
+.cart-button {
+  background-color: $color-orange-2;
+  color: $color-white;
+  font-size: 20px;
+  padding: 1rem 2rem 1rem 2rem;
+  border: none;
+  border-radius: 30px;
+  transition: 0.5s;
+}
+
+.cart-button:hover {
+  background-color: $color-orange-1;
 }
 
 input[type="number"]::-webkit-inner-spin-button,
@@ -55,7 +65,7 @@ input {
   width: 1rem;
   padding: 1rem;
   text-align: center;
-  //   color: $color-grey-3;
+  color: $color-grey-3;
 }
 
 .remove-button {
@@ -66,7 +76,6 @@ input {
 
 .price-text {
   margin-right: 2rem;
-  width: 5rem;
 }
 
 .snackbar-message {

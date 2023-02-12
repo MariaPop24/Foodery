@@ -10,7 +10,6 @@
   background: url("..//../../assets/images/background-image-2.webp") no-repeat
     center center fixed;
   background-size: cover;
-  position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -21,25 +20,16 @@
   align-content: center;
 }
 
-.container-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari and Opera */
+.navbar {
+  position: sticky;
+  top: 0;
 }
 
 .content-container {
   display: flex;
   flex-direction: column;
-  margin: auto;
+  margin: 3rem auto;
   justify-self: center;
-  background-color: $color-white;
-  border-radius: 30px;
-  max-height: 36rem;
-  overflow: auto;
-  scrollbar-width: none; /* Firefox */
-  -ms-overflow-style: none; /* Internet Explorer and Edge */
-}
-
-.content-container::-webkit-scrollbar {
-  display: none;
 }
 
 .total {
@@ -47,6 +37,8 @@
   font-size: 40px;
   display: flex;
   justify-content: space-between;
+  background-color: $color-white;
+  border-radius: 30px;
 }
 
 .checkout-button {
