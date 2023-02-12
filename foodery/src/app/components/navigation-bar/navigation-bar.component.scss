@@ -71,7 +71,9 @@ a:active {
   width: 6rem;
   transition: 0.5s;
   position: absolute;
-  top: 1rem;
+  top: 0.5rem;
+  display: flex;
+  align-items: center;
 }
 
 .nav-item {

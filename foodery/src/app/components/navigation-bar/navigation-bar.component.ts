@@ -80,7 +80,13 @@ export class NavigationBarComponent implements OnInit {
   }
 
   goToProfilePage() {
-    this.router.navigate(['./profile']);
+    if (this.profileName) {
+      this.router.navigate(['./profile']);
+    }
+    else {
+      this.router.navigate(['./login']);
+
+    }
   }
 
 

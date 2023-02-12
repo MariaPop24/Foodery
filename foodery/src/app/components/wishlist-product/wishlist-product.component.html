@@ -1,9 +1,7 @@
-<div class="container">
-  <div *ngIf="isRemoved" class="snackbar-message">
-    <app-snack-bar-message
-      [isRemoveMessage]="isRemoved"
-    ></app-snack-bar-message>
-  </div>
+<div *ngIf="isRemoved" class="snackbar-message">
+  <app-snack-bar-message [isRemoveMessage]="isRemoved"></app-snack-bar-message>
+</div>
+<div class="container" *ngIf="!isRemoved">
   <div *ngIf="isAddedToCart" class="snackbar-message">
     <app-snack-bar-message
       [isAddedToCart]="isAddedToCart"
