@@ -3,6 +3,7 @@ import { AngularFireAuth } from '@angular/fire/compat/auth';
 import { AngularFireDatabase } from '@angular/fire/compat/database';
 import { Router } from '@angular/router';
 import { Location } from '@angular/common';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-profile-page',
@@ -14,13 +15,15 @@ export class ProfilePageComponent implements OnInit {
   public profileName: string;
   public profileEmail: string | undefined | null;
   public avatarURL: string;
+  public isLoggedOut!: boolean;
 
 
-  constructor(public afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router, private location: Location) {
+  constructor(public afAuth: AngularFireAuth, private db: AngularFireDatabase, private router: Router, private snackBar: MatSnackBar) {
     this.profileDetails = { fullName: "", email: "" };
     this.profileName = ""
     this.profileEmail = ""
     this.avatarURL = ""
+    this.isLoggedOut = false;
   }
 
   ngOnInit(): void {
@@ -65,9 +68,11 @@ export class ProfilePageComponent implements OnInit {
 
   //Function for logout
   logout(): void {
+    this.snackBar.open('You have been logged out', 'Dismiss', {
+      duration: 3000 // Time in milliseconds to show the snackbar
+    });
     this.afAuth.signOut();
     localStorage.removeItem("user");
-    this.router.navigate(['./home']);
   }
 
   //Router navigate functions

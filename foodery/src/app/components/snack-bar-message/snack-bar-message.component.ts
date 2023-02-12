@@ -13,7 +13,6 @@ export class SnackBarMessageComponent {
   @Input() isAddedToCart!: boolean;
   @Input() isAddedToWishlist!: boolean;
 
-
   constructor(private _snackBar: MatSnackBar) {
   }
 
@@ -57,6 +56,5 @@ export class SnackBarMessageComponent {
         });
       }, 0)
     }
-
   }
 }

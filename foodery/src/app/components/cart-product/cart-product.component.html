@@ -1,9 +1,7 @@
-<div class="container">
-  <div *ngIf="isRemoved" class="snackbar-message">
-    <app-snack-bar-message
-      [isRemoveMessage]="isRemoved"
-    ></app-snack-bar-message>
-  </div>
+<div *ngIf="isRemoved" class="snackbar-message">
+  <app-snack-bar-message [isRemoveMessage]="isRemoved"></app-snack-bar-message>
+</div>
+<div class="container" *ngIf="!isRemoved">
   <img
     class="product-image"
     src="https://www.mesopotamia.ro/wp-content/uploads/2021/06/size-produse-box-min.jpg.webp"
