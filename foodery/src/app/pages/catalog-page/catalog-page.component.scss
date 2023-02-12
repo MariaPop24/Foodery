@@ -10,7 +10,6 @@
   background: url("..//../../assets/images/background-image-2.webp") no-repeat
     center center fixed;
   background-size: cover;
-  position: fixed;
   top: 0;
   left: 0;
   min-width: 100%;
@@ -21,8 +20,18 @@
   align-content: center;
 }
 
+.navbar {
+  position: sticky;
+  top: 0;
+}
+
 .content-container {
-  display: flex;
-  flex-direction: column;
   margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.snackbar-message {
+  position: absolute;
+  top: 0;
 }

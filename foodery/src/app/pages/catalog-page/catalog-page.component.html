@@ -1,10 +1,18 @@
 <div class="container">
-  <app-navigation-bar></app-navigation-bar>
+  <app-navigation-bar class="navbar"></app-navigation-bar>
+  <app-snack-bar-message
+    class="sanckbar-message"
+    [profileName]="profileName"
+  ></app-snack-bar-message>
   <div class="content-container">
-    <app-snack-bar-message
-      [profileName]="profileName"
-      [isRemoveMessage]="false"
-    ></app-snack-bar-message>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
+    <app-product-card></app-product-card>
     <app-product-card></app-product-card>
   </div>
 </div>

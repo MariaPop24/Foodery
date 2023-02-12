@@ -10,6 +10,8 @@ export class SnackBarMessageComponent {
 
   @Input() profileName!: string;
   @Input() isRemoveMessage!: boolean;
+  @Input() isAddedToCart!: boolean;
+  @Input() isAddedToWishlist!: boolean;
 
 
   constructor(private _snackBar: MatSnackBar) {
@@ -28,9 +30,28 @@ export class SnackBarMessageComponent {
         });
       }
     }, 1000)
+
     if (this.isRemoveMessage) {
       setTimeout(() => {
         this._snackBar.open('Item removed from cart!', 'Close', {
+          duration: 1000,
+          verticalPosition: 'top',
+        });
+      }, 0)
+    }
+
+    if (this.isAddedToCart) {
+      setTimeout(() => {
+        this._snackBar.open('Item added to cart!', 'Close', {
+          duration: 1000,
+          verticalPosition: 'top',
+        });
+      }, 0)
+    }
+
+    if (this.isAddedToWishlist) {
+      setTimeout(() => {
+        this._snackBar.open('Item added to wishlist!', 'Close', {
           duration: 1000,
           verticalPosition: 'top',
         });

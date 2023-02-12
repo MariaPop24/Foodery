@@ -1,4 +1,14 @@
 <div class="container">
+  <div *ngIf="isAddedToCart" class="snackbar-message">
+    <app-snack-bar-message
+      [isAddedToCart]="isAddedToCart"
+    ></app-snack-bar-message>
+  </div>
+  <div *ngIf="isAddedToWishlist" class="snackbar-message">
+    <app-snack-bar-message
+      [isAddedToWishlist]="isAddedToWishlist"
+    ></app-snack-bar-message>
+  </div>
   <div class="image-favorite-container">
     <img
       class="product-image"
@@ -6,12 +16,14 @@
     />
     <div class="favorite-icon" (click)="addToFavorites()">
       <img
-        *ngIf="isFavorite"
+        (click)="addToWishlist()"
+        *ngIf="!isFavorite"
         class="heart-icon"
         src="../../../assets/icons/heart-icon.png"
       />
       <img
-        *ngIf="!isFavorite"
+        (click)="removeFromWishlist()"
+        *ngIf="isFavorite"
         class="filled-heart-icon"
         src="../../../assets/icons/filled-heart-icon.png"
       />
@@ -22,7 +34,7 @@
     Carne kebab rotisată (curcan și vițel amestec), salată verde, roșii, ceapă
     roșie, sos alb
   </div>
-  <button>
+  <button (click)="addToCart()">
     <img class="icon" src="../../../assets/icons/cart-icon.png" />
     30.99RON
   </button>
