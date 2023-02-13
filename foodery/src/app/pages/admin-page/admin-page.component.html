@@ -1,0 +1,33 @@
+<div class="container">
+  <form
+    id="add-product-form"
+    [formGroup]="addProductForm"
+    (ngSubmit)="addProduct()"
+  >
+    <input
+      class="name-input"
+      maxlength="20"
+      formControlName="productName"
+      placeholder="Write here..."
+    />
+    <input
+      class="name-input"
+      maxlength="20"
+      formControlName="productIngredients"
+      placeholder="Write here..."
+    />
+    <input
+      class="name-input"
+      maxlength="20"
+      formControlName="productImage"
+      placeholder="Write here..."
+    />
+    <input
+      class="name-input"
+      type="number"
+      formControlName="productPrice"
+      placeholder="Write here..."
+    />
+    <button class="save-task-btn" type="submit">Save</button>
+  </form>
+</div>

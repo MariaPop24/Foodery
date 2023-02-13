@@ -21,6 +21,7 @@ import { CartProductComponent } from './components/cart-product/cart-product.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { SnackBarMessageComponent } from './components/snack-bar-message/snack-bar-message.component';
 import { WishlistProductComponent } from './components/wishlist-product/wishlist-product.component';
+import { AdminPageComponent } from './pages/admin-page/admin-page.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { WishlistProductComponent } from './components/wishlist-product/wishlist
     EditProfilePageComponent,
     CartProductComponent,
     SnackBarMessageComponent,
-    WishlistProductComponent
+    WishlistProductComponent,
+    AdminPageComponent
   ],
   imports: [
     BrowserModule,
