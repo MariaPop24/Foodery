@@ -61,15 +61,10 @@ export class AdminPageComponent {
         price: this.productPrice,
       };
       this.allProducts.push(addProductFormData);
-      let username = localStorage.getItem('user');
       this.db
-        .object('users/' + username + '/products')
+        .object('products/products')
         .set({ products: this.allProducts });
-      this.addProductForm.reset(
-        {
-          "label": ""
-        }
-      );
+
       this.getStarted();
     } else {
       return;

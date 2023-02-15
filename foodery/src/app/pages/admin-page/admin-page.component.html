@@ -4,24 +4,27 @@
     [formGroup]="addProductForm"
     (ngSubmit)="addProduct()"
   >
+    <label>Product name</label>
     <input
       class="name-input"
       maxlength="20"
       formControlName="productName"
       placeholder="Write here..."
     />
+    <label>Product ingredients</label>
     <input
       class="name-input"
-      maxlength="20"
       formControlName="productIngredients"
       placeholder="Write here..."
     />
+    <label>Product image link</label>
     <input
       class="name-input"
       maxlength="20"
       formControlName="productImage"
       placeholder="Write here..."
     />
+    <label>Product price</label>
     <input
       class="name-input"
       type="number"
