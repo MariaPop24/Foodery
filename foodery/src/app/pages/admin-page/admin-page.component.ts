@@ -75,7 +75,7 @@ export class AdminPageComponent {
   getProduct() {
     return new Promise((resolve, reject) => {
       this.db
-        .list('products/products')
+        .list('products/products/products')
         .valueChanges()
         .subscribe((value) => {
           resolve(value);
